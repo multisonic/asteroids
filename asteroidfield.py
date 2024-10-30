@@ -3,6 +3,7 @@ import random
 from asteroid import Asteroid
 from constants import *
 
+
 class AsteroidField(pygame.sprite.Sprite):
     edges = [
         [
@@ -32,8 +33,8 @@ class AsteroidField(pygame.sprite.Sprite):
         self.spawn_timer = 0.0
 
     def spawn(self, radius, position, velocity):
-      asteroid = Asteroid(position.x, position.y, radius)
-      asteroid.velocity = velocity  # Set the velocity attribute
+        asteroid = Asteroid(position.x, position.y, radius)
+        asteroid.velocity = velocity
 
     def update(self, dt):
         self.spawn_timer += dt
